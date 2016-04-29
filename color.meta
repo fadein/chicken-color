@@ -1,0 +1,13 @@
+;;;; color.meta -*- Scheme -*-
+; vim:set filetype=scheme:
+
+((synopsis "The SLIB color library")
+ (license "BSD")
+ (category graphics)
+ (depends fmt records)
+ (doc-from-wiki)
+ (files "tests/run.scm" "color.meta" "color-module.scm" "color.scm"
+        "color.setup" "colorspc.scm" "slib-compat.scm" "daylight.scm"
+        "color-example.scm")
+ (author "Aubrey Jaffer")
+ (maintainer "Erik Falor"))
