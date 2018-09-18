@@ -2,7 +2,7 @@
 ; vim:set filetype=scheme:
 
 
-(compile -O3 -d1 color-module.scm -JSs -o color.so)
+(compile -O3 -d1 color.scm -JSs -o color.so)
 (compile -s -O3 -d0 color.import.scm)
 
 (install-extension

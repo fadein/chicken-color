@@ -4,9 +4,9 @@
 ((synopsis "The SLIB color library")
  (license "BSD")
  (category graphics)
- (depends fmt records)
- (doc-from-wiki)
- (files "tests/run.scm" "color.meta" "color.scm" "color.setup" "colorspc.scm"
-        "slib-compat.scm" "daylight.scm" "color-example.scm")
+ (dependencies fmt records srfi-13)
+ (components (extension color))
+ (component-options
+   (csc-options "-O3" "-d1"))
  (author "Aubrey Jaffer")
  (maintainer "Erik Falor"))

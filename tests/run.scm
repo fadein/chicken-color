@@ -1,4 +1,8 @@
-(use color)
+(import scheme)
+
+(cond-expand
+  (chicken-4 (use color))
+  (chicken-5 (import color)))
 
 (define forestgreen (sRGB->color '(34 139 34)))
 (assert (color? forestgreen ))

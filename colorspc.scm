@@ -17,7 +17,6 @@
 ;promotional, or sales literature without prior written consent in
 ;each case.
 
-(include "slib-compat.scm")
 ;@
 (define (color:linear-transform matrix row)
   (map (lambda (mrow) (apply + (map * mrow row)))

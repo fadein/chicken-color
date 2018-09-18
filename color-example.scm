@@ -5,7 +5,18 @@
 ;; Create an HTML file named color-eggsample.html demonstrating
 ;; some of the possibilities for high-level color manipulations
 
-(use color)
+(import scheme)
+(cond-expand
+  (chicken-4
+    (use color))
+
+  (chicken-5
+    (import
+      color
+      (chicken format)
+      (chicken string)
+      srfi-1
+      srfi-13)))
 
 (define the-colors
   (list (cons (sRGB->color '(#xff #x00 #x00)) "Red")
