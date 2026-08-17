@@ -120,7 +120,7 @@
   (import scheme)
 
   (cond-expand
-    (chicken-5
+    ((or chicken-5 chicken-6)
       (import
         (chicken base)
         (chicken port)
@@ -163,7 +163,7 @@
 
 
 (define color:rtd
-  (make-record-type "color"
+  (make-record-type 'color
 		    '(encoding		;symbol
 		      coordinates	;list of coordinates
 		      parameter		;white-point or precision

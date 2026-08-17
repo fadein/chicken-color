@@ -2,6 +2,7 @@
 ; vim:set filetype=scheme:
 
 ((synopsis "The SLIB color library")
+ (version "1.2")
  (license "BSD")
  (category graphics)
  (dependencies fmt records srfi-13)

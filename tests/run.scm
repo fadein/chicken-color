@@ -2,10 +2,10 @@
 
 (cond-expand
   (chicken-4 (use color))
-  (chicken-5 (import color)))
+  ((or chicken-5 chicken-6) (import color)))
 
 (define forestgreen (sRGB->color '(34 139 34)))
-(assert (color? forestgreen ))
+(assert (color? forestgreen))
 (assert (equal? (color->string forestgreen) "sRGB:34/139/34"))
 
 (define lightcyan4 (sRGB->color '(122 139 139)))
@@ -17,7 +17,6 @@
 (assert (< 64.360 (CIE:DE* lightcyan4 forestgreen) 64.370))
 (assert (< 57.266 (CIE:DE*94 lightcyan4 forestgreen) 57.300))
 (assert (< 71.850 (CMC:DE* lightcyan4 forestgreen) 72.100))
-
 
 (assert (equal? (color->string D65) "CIEXYZ:0.950456/1.0/1.088754"))
 
